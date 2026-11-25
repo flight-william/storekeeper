@@ -32,9 +32,8 @@ Apple's service.
 ## Install
 
 ```sh
-# Homebrew, once a release is tagged (Formula/storekeeper.rb is a draft; this
-# repository is its own tap, OWNER is its owner)
-brew tap OWNER/storekeeper https://github.com/OWNER/storekeeper
+# Homebrew: this repository is its own tap
+brew tap flight-william/storekeeper https://github.com/flight-william/storekeeper
 brew install storekeeper
 
 # Or from a checkout, no install at all
