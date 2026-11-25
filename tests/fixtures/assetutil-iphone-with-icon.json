@@ -1,0 +1,58 @@
+[
+  {
+    "AssetStorageVersion": "synthetic fixture",
+    "Authoring Tool": "synthetic fixture",
+    "CoreUIVersion": 1,
+    "DumpToolVersion": 1.0,
+    "Key Format": [
+      "kCRThemeElementName",
+      "kCRThemeScaleName"
+    ],
+    "MainVersion": "synthetic fixture",
+    "Platform": "ios",
+    "PlatformVersion": "16.0",
+    "SchemaVersion": 2,
+    "StorageVersion": 1,
+    "Timestamp": 0
+  },
+  {
+    "AssetType": "Color",
+    "Color components": [
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "Colorspace": "srgb",
+    "Name": "SampleTint",
+    "NameIdentifier": 2002,
+    "Scale": 1,
+    "SizeOnDisk": 100
+  },
+  {
+    "AssetType": "Icon Image",
+    "BitsPerComponent": 8,
+    "ColorModel": "RGB",
+    "Colorspace": "srgb",
+    "Icon Index": 1,
+    "Name": "AppIcon",
+    "NameIdentifier": 1001,
+    "PixelHeight": 512,
+    "PixelWidth": 512,
+    "RenditionName": "example-icon-512.png",
+    "Scale": 1,
+    "SizeOnDisk": 1234,
+    "Idiom": "phone"
+  },
+  {
+    "AssetType": "MultiSized Image",
+    "Name": "AppIcon",
+    "NameIdentifier": 1001,
+    "Scale": 1,
+    "SizeOnDisk": 100,
+    "Sizes": [
+      "512x512 index:1 idiom:phone"
+    ],
+    "Idiom": "phone"
+  }
+]

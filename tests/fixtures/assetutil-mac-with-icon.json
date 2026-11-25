@@ -1,0 +1,53 @@
+[
+  {
+    "AssetStorageVersion": "synthetic fixture",
+    "Authoring Tool": "synthetic fixture",
+    "CoreUIVersion": 1,
+    "DumpToolVersion": 1.0,
+    "Key Format": [
+      "kCRThemeElementName",
+      "kCRThemeScaleName"
+    ],
+    "MainVersion": "synthetic fixture",
+    "Platform": "macosx",
+    "PlatformVersion": "12.0",
+    "SchemaVersion": 2,
+    "StorageVersion": 1,
+    "Timestamp": 0
+  },
+  {
+    "AssetType": "Icon Image",
+    "BitsPerComponent": 8,
+    "ColorModel": "RGB",
+    "Colorspace": "srgb",
+    "Icon Index": 1,
+    "Name": "AppIcon",
+    "NameIdentifier": 1001,
+    "PixelHeight": 64,
+    "PixelWidth": 64,
+    "RenditionName": "example-icon-64.png",
+    "Scale": 1,
+    "SizeOnDisk": 1234
+  },
+  {
+    "AssetType": "Image",
+    "Name": "SampleGlyph",
+    "NameIdentifier": 3003,
+    "PixelHeight": 10,
+    "PixelWidth": 12,
+    "RenditionName": "sample-glyph.png",
+    "Scale": 1,
+    "SizeOnDisk": 200
+  },
+  {
+    "AssetType": "MultiSized Image",
+    "Name": "AppIcon",
+    "NameIdentifier": 1001,
+    "Scale": 1,
+    "SizeOnDisk": 100,
+    "Sizes": [
+      "64x64 index:1 idiom:universal",
+      "128x128 index:2 idiom:universal"
+    ]
+  }
+]

@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "storekeeper"
+dynamic = ["version"]
+description = "A safety layer over Apple's App Store Connect API: Keychain key, dry run by default, write fences, masked output."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+classifiers = [
+    "Environment :: Console",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+dependencies = []
+
+[project.optional-dependencies]
+# Signs in-process instead of through the openssl command. Not needed.
+cryptography = ["cryptography"]
+
+[project.scripts]
+storekeeper = "storekeeper.cli:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "storekeeper.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+storekeeper = ["with-key.sh"]

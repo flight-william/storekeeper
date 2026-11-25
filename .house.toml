@@ -1,0 +1,31 @@
+# house checks this repo: the tools each stage runs, by adapter name, and the tests.
+# Languages: Python (src/, tests/) and one bash script (src/storekeeper/with-key.sh).
+[house]
+minimum = "0.4.1"
+
+[tools]
+commit = ["ruff", "ruff-format", "shellcheck", "gitleaks", "semgrep", "r3"]
+push = ["ruff", "ruff-format", "shellcheck", "gitleaks", "semgrep", "r3"]
+
+# The suites, each a program and its arguments from the repo root. All of them use
+# the fake secret store and open no socket.
+[tests]
+commit = []
+push = [
+    ["python3", "-I", "tests/test_client.py"],
+    ["python3", "-I", "tests/test_fences.py"],
+    ["python3", "-I", "tests/test_key.py"],
+    ["python3", "-I", "tests/test_with_key.py"],
+    ["python3", "-I", "tests/test_icon.py"],
+    ["python3", "-I", "tests/test_cli.py"],
+    ["python3", "-I", "tests/test_hardening_requests.py"],
+    ["python3", "-I", "tests/test_hardening_output.py"],
+]
+
+# Recorded tool output and Apple's placeholder image: data, never handed to a tool.
+[commit]
+# Agents that may co-author a commit, by exact model id (R17).
+models = ["claude-opus-5-5", "claude-sonnet-5-5", "claude-haiku-5-5", "gpt-6.1-sol"]
+
+[paths]
+exclude = ["tests/fixtures/"]

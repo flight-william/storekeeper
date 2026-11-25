@@ -1,0 +1,9 @@
+# Runs on macOS's /usr/bin/python3 (3.9) too, so pyupgrade must not suggest newer syntax.
+line-length = 100
+target-version = "py39"
+
+[lint]
+select = ["E", "F", "I", "UP", "B", "C901"]
+
+[lint.mccabe]
+max-complexity = 10
