@@ -26,8 +26,12 @@ jobs:
         with:
           persist-credentials: false
 
+      # house's formula lives in the public housekeeper repo, not in a
+      # homebrew-housekeeper repo, so the tap needs its full address.
       - name: Install house and the tools it runs
-        run: brew install flight-william/housekeeper/house ruff semgrep gitleaks shellcheck
+        run: |
+          brew tap flight-william/housekeeper https://github.com/flight-william/housekeeper
+          brew install flight-william/housekeeper/house ruff semgrep gitleaks shellcheck
 
       - name: house check --all
         run: house check --all
