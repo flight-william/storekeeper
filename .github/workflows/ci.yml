@@ -1,0 +1,33 @@
+# Every pull request to main, and every push to main, is checked by house on a
+# GitHub-hosted machine. Never a self-hosted runner: this repository is public,
+# and house refuses a public repository on a self-hosted runner.
+name: ci
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  house:
+    name: house
+    runs-on: macos-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install house and the tools it runs
+        run: brew install flight-william/housekeeper/house ruff semgrep gitleaks shellcheck
+
+      - name: house check --all
+        run: house check --all
